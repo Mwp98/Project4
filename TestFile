@@ -1,5 +1,6 @@
 import requests
 import datetime
+import re
 import os.path
 from os import path
 list = []
@@ -19,25 +20,13 @@ else:
   
 logfile = open('http_access_log.txt', 'r')
 
-print("The total number of requests made in the last year were")
+print("The total number of requests made each day were:")
 with open('http_access_log.txt') as j:
     
-    for line in j:
-        V = line.split(' ')
-        list.append(V[3])
-        
-    for date in list:
-         if (date[10:12] == '95'):
-           K = K + 1;
+   regex = re.compile(".+ \[(.+).+\] "[A-Z]{3,4} (.+)HTTP/1.0" ([0-9]{3})")
+   parts = regex.split(log_line)
+   print parts
     
-print(K) 
 
-print("The total requests made in the time period were")
-with open('http_access_log.txt') as j:
-    
-    for line in j:
-        V = line.split(' ')
-        list.append(V[3])
-        Z = Z + 1;
 
-print (Z)
+
