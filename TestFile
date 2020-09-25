@@ -59,26 +59,18 @@ for line in open('http_access_log.txt'):
      if int(return_code) >= 300 and int(return_code) <= 399:
       redirect += 1
      print(redirect)
-print("The most reqeusted file was:") 
+
 for line in open('http_access_log.txt'):
 filename = elements[4]
-     if filename in files:
+    if filename in files:
    
-   files[filename] += 1
+     files[filename] += 1
 
     else:
-   files[filename] = 1
-     print(file[filename])
-print("The least requested file was") 
-for line in open('http_access_log.txt'):
-  filename = elements[4]
-     if filename in files:
-   
-   files[filename] += 1
+     files[filename] = 1
+print("The most requested file was:", sorted(files, key = files.get, reverse = True)[:1])
+print("The least requested file was:", sorted(files, key = files.get, reverse = False)[:1])
 
-    else:
-   files[filename] = 1
-     print(file[filename])
 print("Breaking Files...") 
 
 
