@@ -41,9 +41,9 @@ for line in open('http_access_log.txt'):
     
 print("The total number of requests made each week were:")  
 for line in open('http_access_log.txt'):
-     if "24/Oct/1994" in line:
-      Oct_24_94_requests += 1
-     print(Oct_24_94_requests)
+     if "24/Oct/1994" or "25/Oct/1994" or "26/Oct/1994" or "27/Oct/1994" or "28/Oct/1994" or "29/Oct/1994" or "30/Oct/1994" or "31/Oct/1994 " in line:
+      week_requests += 1
+     print(week_requests)
 print("The total number of requests made each month were:") 
 for line in open('http_access_log.txt'):
      if "/Oct/1994" in line:
