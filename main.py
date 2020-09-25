@@ -72,3 +72,53 @@ print("The most requested file was:", sorted(files, key = files.get, reverse = T
 print("The least requested file was:", sorted(files, key = files.get, reverse = False)[:1])
 
 print("Breaking Files...") 
+Out1 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Oct/1994" in line:
+    Out1F.write(line)
+ Out2 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Nov/1994" in line:
+    Out2F.write(line)
+Out3 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Dec/1994" in line:
+    Out3F.write(line)
+Out4 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Jan/1995" in line:
+    Out4F.write(line)    
+    
+Out5 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Feb/1995" in line:
+    Out5F.write(line)   
+Out6 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Mar/1995" in line:
+    Out6F.write(line)  
+    
+Out7 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Apr/1995" in line:
+    Out7F.write(line)   
+Out8 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "May/1995" in line:
+    Out8F.write(line)   
+Out9 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Jun/1995" in line:
+    Out9F.write(line)   
+Out10 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Jul/1995" in line:
+    Out10F.write(line)   
+Out11 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Aug/1995" in line:
+    Out7F.write(line)   
+Out12 = open("http_access_log.txt", "a")
+for line in open('http_access_log.txt'):
+  if "Sep/1995" in line:
+    Out12F.write(line)   
