@@ -11,8 +11,8 @@ week_requests = 0
 month_requests = 0
 errors = 0
 redirect = 0
-mreq = 0
-lreq = 0
+files = {}
+
 return_code = 0
 if path.isfile('http_access_log.txt') == False:
   url='https://s3.amazonaws.com/tcmg476/http_access_log'
@@ -61,14 +61,24 @@ for line in open('http_access_log.txt'):
      print(redirect)
 print("The most reqeusted file was:") 
 for line in open('http_access_log.txt'):
-     if "300" in line:
-      mreq += 1
-     print(mreq)
+filename = elements[4]
+     if filename in files:
+   
+   files[filename] += 1
+
+    else:
+   files[filename] = 1
+     print(file[filename])
 print("The least requested file was") 
 for line in open('http_access_log.txt'):
-     if elements[0] >= 300 in line:
-      lreq += 1
-     print(lreq)
+  filename = elements[4]
+     if filename in files:
+   
+   files[filename] += 1
+
+    else:
+   files[filename] = 1
+     print(file[filename])
 print("Breaking Files...") 
 
 
